@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" stylesheets="@css/Geral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="safety.control.CadEmpresasController">
+    <children>
+        <ScrollPane prefHeight="400.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="435.0">
+                    <children>
+                        <GridPane AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                            <children>
+                                <Label fx:id="rotuloNomeFantasia" styleClass="rotulo" text="Nome Fantasia" GridPane.rowIndex="0">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloRazao" styleClass="rotulo" text="Razão Social" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloCnpj" styleClass="rotulo" text="CNPJ" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloInscricao" styleClass="rotulo" text="Inscrição Estadual" GridPane.rowIndex="6">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloMatriz" styleClass="rotulo" text="Matriz" GridPane.columnIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloRepresentante" styleClass="rotulo" text="Representante Legal" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloTelefone" styleClass="rotulo" text="Telefone" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoNomeFantasia" promptText="Insira o Nome da Empresa" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoRazao" promptText="Insira a Razaão Social" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoCnpj" promptText="Insira o CNPJ" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoInscricao" promptText="Insira a Inscriçã Estadual" GridPane.rowIndex="7">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" right="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoMatriz" promptText="Insira a Matriz" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoRepresentante" promptText="Insira o Nome do Representante" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoTelefone" promptText="Insira o Telefone cm o DDD" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                        <Label layoutX="204.0" layoutY="22.0" styleClass="title" text="Cadastro de Empresas" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button mnemonicParsing="false" onAction="#salvar" styleClass="botao-localizar" text="Salvar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" />
+                        <Button mnemonicParsing="false" onAction="#cancelar" styleClass="botao-localizar" text="Cancelar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="205.0" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

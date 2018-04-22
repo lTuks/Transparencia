@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@css/Geral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="safety.control.MenuController">
+    <children>
+        <VBox layoutX="38.0" layoutY="53.0" prefHeight="400.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirAlunos" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@img/Aluno.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Aluno" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirCadAlunos" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@img/Aluno.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Cadastro Alunos" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirEmpresas" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@img/Fornecedor.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Empresas" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirCadEmpresas" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@img/Fornecedor.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Cadastro Empresas" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@img/Fornecedor.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Cadastro Orgão Fomentador" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Sair">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="5.0" top="5.0" />
+            </padding>
+        </VBox>
+        <AnchorPane layoutX="185.0" layoutY="84.0" prefHeight="400.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TabPane fx:id="tabPrincipal" layoutX="125.0" layoutY="69.0" prefHeight="400.0" prefWidth="450.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
