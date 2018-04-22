@@ -1,0 +1,50 @@
+create database safety plan
+go 
+use safety plan
+go
+
+create table Cadastro_Aluno(
+	Cod_Cadastro_Aluno int serial primary key 
+	Cod_Aluno int not null constraint FK_Aluno foreign key references Aluno(Cod_Aluno),
+	Cod_Endereco int not null constraint FK_Endereco foreign key references Endereco(Cod_Endereco),
+	Cod_Instituicao int not null constraint FK_Instituicao foreign key references Instituicao(Cod_Instituicao),
+  )
+
+
+create table Aluno(
+	Cod_Aluno int  serial primary key ,
+	Nome varchar(50) not null,
+	CPF varchar(11) not null,
+	RG varchar(11) not null
+	Telefone char(20),
+	Email char(20)
+	Cod_Endereco int not null constraint FK_Endereco foreign key references Endereco(Cod_Endereco),
+	Cod_Transporte int not null constraint FK_Transporte foreign key references Transporte(Cod_Transporte),
+	Cod_Instituicao int not null constraint FK_Instituiçao foreign key references Instituicao(Cod_Instituicao),
+)
+create table Endereco(
+	Cod_Endereco int  serial primary key,
+	Rua varchar(50) not null,
+	Bairro varchar(50) not null,
+	Cidade varchar(45) not null,
+	Estado varchar(20) not null,
+	Cep varchar(8),
+)
+
+create table Instituicao(
+	Cod_Instituicao int  serial primary key,
+	Nome varchar(50) not null,
+	Curso varchar(50) not null,
+	Cidade varchar(45) not null,
+	Estado varchar(20) not null,
+)
+
+create table Transporte(
+	Cod_Transporte int  serial primary key,
+	nomefantasia varchar(60), 
+	razaosocial varchar(60),
+	CNPJ numeric(14) not null,
+	Inscricao_Estadual varchar(9) not null,
+	Matriz varchar(50) not null,
+	Representante varchar(50) not null,
+)
