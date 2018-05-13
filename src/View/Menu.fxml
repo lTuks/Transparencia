@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="Css/Geral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.MenuController">
+    <children>
+        <VBox layoutX="38.0" layoutY="53.0" prefHeight="400.0" prefWidth="150.0" styleClass="menu-lateral" stylesheets="@../Css/Geral.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirRelatorios" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../Img/Relatorio.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Relatórios" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+            <Button mnemonicParsing="false" onAction="#acessarCadastro" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item" text="Button">
+               <graphic>
+                  <HBox prefHeight="45.0" prefWidth="136.0">
+                     <children>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Img/Aluno.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets right="5.0" top="15.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Cadastro Usuários">
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirCadAlunos" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../Img/Aluno.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Cadastro Alunos" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirCadEmpresas" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../Img/Fornecedor.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Cadastro Empresas" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button layoutX="112.0" layoutY="119.0" mnemonicParsing="false" onAction="#abrirCadOrgFomentador" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item">
+                    <graphic>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                            <children>
+                                <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                    <HBox.margin>
+                                        <Insets right="5.0" />
+                                    </HBox.margin>
+                                    <image>
+                                        <Image url="@../Img/Fornecedor.png" />
+                                    </image>
+                                </ImageView>
+                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="113.0" text="Cadastro Orgão Fomentador" />
+                            </children>
+                        </HBox>
+                    </graphic>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button mnemonicParsing="false" onAction="#sair" prefHeight="50.0" prefWidth="150.0" styleClass="menu-item">
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                    </VBox.margin>
+               <graphic>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Sair" />
+               </graphic>
+                </Button>
+            </children>
+            <padding>
+                <Insets left="5.0" top="5.0" />
+            </padding>
+        </VBox>
+        <AnchorPane layoutX="185.0" layoutY="84.0" prefHeight="400.0" prefWidth="450.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TabPane fx:id="tabPrincipal" prefHeight="400.0" prefWidth="450.0" stylesheets="@../Css/Geral.css" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
