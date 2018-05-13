@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="450.0" styleClass="root" stylesheets="@../Css/Geral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Control.CadAlunoController">
+    <children>
+        <ScrollPane prefHeight="400.0" prefWidth="450.0" stylesheets="@../Css/Geral.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+            <content>
+                <AnchorPane maxWidth="600.0" minHeight="0.0" minWidth="0.0" prefHeight="565.0" prefWidth="435.0" stylesheets="@../Css/Geral.css">
+                    <children>
+                  <Button layoutX="139.0" layoutY="376.0" mnemonicParsing="false" onAction="#editar" styleClass="botaoEntrar" stylesheets="@../Css/Geral.css" text="Salvar Edição" AnchorPane.bottomAnchor="0.0" />
+                        <Label styleClass="title" stylesheets="@../Css/Geral.css" text="Cadastro de novos Alunos" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <GridPane layoutY="103.0" prefHeight="411.0" prefWidth="435.0" stylesheets="@../Css/Geral.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="103.0">
+                            <children>
+                                <Label fx:id="rotuloNome" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Nome">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoNome" prefWidth="350.0" promptText="Insira o nome completo" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotuloCpf" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="CPF" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoCpf" onKeyReleased="#tfCPFKeyRelased" prefWidth="150.0" promptText="Insira o CPF" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotulorg" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="RG" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoRg" onKeyReleased="#tfRGKeyRelased" prefWidth="150.0" promptText="Insira o RG" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotuloEmail" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Email" GridPane.rowIndex="6">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoEmail" prefWidth="350.0" promptText="Insira o E-mail" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="7">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotuloTelefone" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Telefone" GridPane.rowIndex="8">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloInstituicao" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Instituição" GridPane.rowIndex="10">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoTelefone" onKeyReleased="#tfTelefoneKeyRelased" promptText="Insira o Telefone" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="9">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoInstituicao" promptText="Insiria a Instituição de Ensino" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="11">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoRua" promptText="Insira a Rua" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>                                            
+                                <TextField fx:id="campoBairro" promptText="Insira o Bairro" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoCidade" promptText="Insira a Cidade" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoEstado" promptText="Insira o Estado" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <TextField fx:id="campoCep" onKeyReleased="#tfCEPKeyRelased" promptText="Insira o CEP" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotuloCep" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="CEP" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloEstado" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Estado" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloCidade" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Cidade" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloBairro" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Bairro" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloRua" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Rua" GridPane.columnIndex="1">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloSituacao" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Situação" GridPane.columnIndex="1" GridPane.rowIndex="12">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <Label fx:id="rotuloTransporte" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Transporte" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                <TextField fx:id="campoTransporte" promptText="Insira o nome da Empresa" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                    <GridPane.margin>
+                                        <Insets left="20.0" />
+                                    </GridPane.margin>
+                                </TextField>
+                                <Label fx:id="rotuloObservacao" styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Observações" GridPane.rowIndex="12">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </Label>
+                                 <TextField fx:id="campoSituacao" promptText="Insira Ativo ou Inativo" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <GridPane.margin>
+                              <Insets left="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                                <TextArea id="campo" fx:id="campoObservacao" prefHeight="0.0" prefWidth="208.0" styleClass="campo" stylesheets="@../Css/Geral.css" GridPane.rowIndex="13">
+                                    <GridPane.margin>
+                                        <Insets left="10.0" />
+                                    </GridPane.margin>
+                                </TextArea>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                        <Button layoutX="244.0" layoutY="376.0" mnemonicParsing="false" onAction="#salvar" styleClass="botaoEntrar" stylesheets="@../Css/Geral.css" text="Cadastrar" AnchorPane.bottomAnchor="0.0" />
+                  <HBox layoutX="36.0" layoutY="54.0" prefHeight="38.0" prefWidth="380.0" styleClass="hbox" stylesheets="@../Css/Geral.css">
+                     <children>
+                        <Label styleClass="rotulo" stylesheets="@../Css/Geral.css" text="Editar Aluno:">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="campoBusca" prefHeight="24.0" prefWidth="196.0" promptText="Insira o Nome Completo" styleClass="campo" stylesheets="@../Css/Geral.css">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button mnemonicParsing="false" onAction="#pesquisarAluno" styleClass="botao" stylesheets="@../Css/Geral.css" text="Pesquisar">
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="campoCodigo" layoutX="386.0" layoutY="91.0" prefHeight="25.0" prefWidth="30.0" styleClass="campo" stylesheets="@../Css/Geral.css" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

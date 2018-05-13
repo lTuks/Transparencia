@@ -1,0 +1,67 @@
+.root {
+    -fx-base: darkgray;
+    -fx-background: #c0c0c0;
+}
+.campo {
+    -fx-background-color: #c0c0c0;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: white;
+    -fx-prompt-text-fill: rgba(0,0,0,0.6);
+    -fx-font-family: Century;
+    -fx-font-size: 12;
+}
+.menu-lateral {
+    -fx-background-color: #3399ff;
+    -fx-border-color: white;
+    -fx-border-width: 0 1 0  0 ;
+}
+.menu-item:hover {
+    -fx-background-color: white;
+    -fx-cursor: hand;
+}
+.title {
+    -fx-font-size: 20pt;
+}
+.rotulo {
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 0;
+}
+.rotuloSenha {
+    -fx-text-fill: #2f809a;
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 0 0;
+}
+.botao {
+    -fx-cursor: hand;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 3;
+}
+.botaoEntrar {
+    -fx-cursor: hand;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 3;
+}
+.botaoSair {
+    -fx-cursor: hand;
+    -fx-border-color: #c0c0c0;
+    -fx-border-radius: 3;
+}
+.botao:hover {
+    -fx-background-color: blue;
+    -fx-text-fill: white;
+}
+.botaoEntrar:hover {
+    -fx-background-color: green;
+    -fx-text-fill: white;
+}
+.botaoSair:hover {
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+.hbox {
+    -fx-border-color: white;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+}

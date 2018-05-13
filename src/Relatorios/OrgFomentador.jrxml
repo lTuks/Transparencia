@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ad49af97-9c38-432d-972b-44c9db0d2fb8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from OrgFomentador
+order by nomefantasia]]>
+	</queryString>
+	<field name="cod_orgfomentador" class="java.lang.Integer"/>
+	<field name="nomefantasia" class="java.lang.String"/>
+	<field name="razaosocial" class="java.lang.String"/>
+	<field name="cnpj" class="java.lang.String"/>
+	<field name="inscricao_estadual" class="java.lang.String"/>
+	<field name="representante" class="java.lang.String"/>
+	<field name="telefone" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="223" y="0" width="345" height="50" uuid="8576fee1-666d-41eb-9633-049169c38de4"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Relatório de Orgão Fomentador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="646" y="0" width="156" height="50" uuid="b272051c-39d2-4034-af5c-9366834da972"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[ASSESU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="632" y="36" width="182" height="14" uuid="53bf3ab7-267c-4777-b820-dfa129484f53"/>
+				<text><![CDATA[Associação de Estudantes Universitários]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="34" height="50" uuid="b9ac0b58-79e3-449a-b5d5-6e066fe97d9b"/>
+				<imageExpression><![CDATA["C:\\Users\\FichesteR\\Desktop\\Safety Plan S04\\src\\Img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="50" width="55" height="20" uuid="069dea32-e333-4f08-a411-9de80c45c5ec"/>
+				<text><![CDATA[Safety Plan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="23">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="64c64d43-3161-4982-b3cd-767fcef543cf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="2" width="99" height="20" uuid="72253ab1-7f8e-4f98-bfa0-824f6166fce6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Razão Social]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="199" y="3" width="98" height="20" uuid="441629ab-fff9-46d9-9457-27bbd639ed85"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="3" width="99" height="20" uuid="5995bc0f-cc3e-48c2-8bc9-df15a18feb99"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Inscrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="396" y="3" width="100" height="20" uuid="3ddb4111-d2bb-43bc-913e-ad5586bc914a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Representante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="2" width="99" height="20" uuid="bc719600-741b-46bb-bc40-292c7432913c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="42" uuid="ee870238-ffe3-4cb5-8abd-ff5e6232b223"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nomefantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="99" y="0" width="100" height="42" uuid="9f69eed8-3e46-42c4-bb49-e1ce345372ee"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{razaosocial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="198" y="0" width="100" height="42" uuid="ddf349f1-d37f-4f1c-8882-e4e284d361af"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="297" y="0" width="100" height="42" uuid="7d8078fe-9400-44b1-9382-9b6259a05d5a"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{inscricao_estadual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="396" y="0" width="100" height="42" uuid="0e3eb88f-166e-4e01-ae2c-bbc4c4575a0c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{representante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="495" y="0" width="100" height="42" uuid="5ef173d3-5018-4095-912d-02cc93793738"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-5" y="-1" width="829" height="1" uuid="ffa0f41b-aa40-424e-b6ea-1a4fdaa7ca70"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="315" height="20" uuid="a338e203-19f5-44c8-819c-5ce5bbf6f0f7"/>
+				<text><![CDATA[Associação de Estudantes Universitários - ASSESU -Dois Vizinhos,]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="307" y="0" width="100" height="20" uuid="f9d7eee6-ca53-4767-ab92-2795a56eff1c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="h.mm.ss a">
+				<reportElement x="383" y="0" width="100" height="20" uuid="2509a911-aede-4555-aab7-44db38b4aaf7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="20" uuid="3159b62d-8f97-456c-a8d7-5e0fafe9879c"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="802" height="1" uuid="18fec3dd-1ab7-4973-b64d-353fb1f43e2e"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

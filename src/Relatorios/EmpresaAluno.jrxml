@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="43d916f5-d40e-4225-9617-2ff48403f5ff">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     e."nomefantasia" AS Nome,
+     e."representante" AS Representante,
+     e."telefone" AS Telefone,
+     e."valor" AS Valor,
+     a."nome" AS aluno_nome,
+     a."cpf" AS aluno_cpf,
+     a."instituicao" AS aluno_instituicao,
+     a."situacao" AS aluno_situacao,
+     a."telefone" AS aluno_telefone,
+     a."email" AS aluno_email
+FROM
+     "public"."empresa" e INNER JOIN "public"."aluno" a ON e."nomefantasia" = a."transporte"
+WHERE a."situacao" = 'Ativo'
+ORDER BY
+     e."nomefantasia" ASC]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="representante" class="java.lang.String"/>
+	<field name="telefone" class="java.lang.String"/>
+	<field name="valor" class="java.lang.String"/>
+	<field name="aluno_nome" class="java.lang.String"/>
+	<field name="aluno_cpf" class="java.lang.String"/>
+	<field name="aluno_instituicao" class="java.lang.String"/>
+	<field name="aluno_situacao" class="java.lang.String"/>
+	<field name="aluno_telefone" class="java.lang.String"/>
+	<field name="aluno_email" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement x="632" y="51" width="182" height="14" uuid="95aa3e78-fffb-44c2-9adc-25f8a9bd4649"/>
+				<text><![CDATA[Associação de Estudantes Universitários]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="646" y="15" width="156" height="50" uuid="1883a427-f598-43c6-bf11-96230fc15472"/>
+				<textElement>
+					<font size="36"/>
+				</textElement>
+				<text><![CDATA[ASSESU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="15" width="345" height="50" uuid="be03a37b-8672-42ea-9310-8317e67a0475"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Relatório de Empresas/Alunos]]></text>
+			</staticText>
+			<image>
+				<reportElement x="20" y="2" width="34" height="50" uuid="f2ad5470-a024-4c23-8e25-22ef2a9ea17b"/>
+				<imageExpression><![CDATA["C:\\Users\\FichesteR\\Desktop\\Safety Plan S04\\src\\Img\\Logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="50" width="55" height="20" uuid="243e00fe-9eb1-4dde-bb5f-d869216bfc39"/>
+				<text><![CDATA[Safety Plan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="82" height="34" uuid="8f9f1bad-abc3-4f51-a3fb-0cb0124c359e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="0" width="81" height="34" uuid="30f1ed40-a1f9-4032-b1a9-2afe301be86c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome Representante]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="0" width="100" height="34" uuid="58052a10-b256-4df1-b6ff-87e58067e73d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telefone Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="263" y="0" width="83" height="34" uuid="6c0ef924-28d2-47e8-be0d-7c3695407f4b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nome Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="0" width="77" height="34" uuid="68ed18db-d50f-4302-aee5-954651d07ae1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CPF Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="83" height="34" uuid="d1f12a0f-7b10-40fa-bcaf-97c81509869a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Instituição de Ensino]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="0" width="81" height="34" uuid="940f25c2-a3bf-40e7-a831-cb68bcdd3991"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Telefone Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="587" y="0" width="125" height="34" uuid="29c38abe-367e-4766-91a5-d3de13809c18"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Email Aluno]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="0" width="58" height="34" uuid="5506797d-10c2-4d9e-8ecc-1acdd35710d9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Valor (R$)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="770" y="0" width="47" height="34" uuid="6574fda7-a271-410a-978c-d94568b5ed2c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Situação]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="82" height="40" uuid="9e79d047-6be4-4027-ba72-374c591a3ecf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="81" height="40" uuid="fb6e1eb0-09f7-4f23-93cc-2b78cac8e587"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{representante}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="163" y="0" width="100" height="40" uuid="23b95062-62c5-4ce8-8f0c-283cff29a1a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="263" y="0" width="83" height="40" uuid="abccb203-0542-47ec-a323-3242a6c99198"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="77" height="40" uuid="1eca703e-cf88-41eb-a9e6-22ebfd07bb0f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="423" y="0" width="83" height="40" uuid="7242da08-fcc1-4ef6-a0da-243ffb7673a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_instituicao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="81" height="40" uuid="56e68b14-3846-4149-bb61-af446f89b23d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="587" y="0" width="125" height="40" uuid="7e2d1111-be95-4c23-b2b8-694bc4ae35bf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="712" y="0" width="58" height="40" uuid="ebec6a31-3379-44fd-8392-8fd7fe088650"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="770" y="0" width="47" height="40" uuid="22ee53f4-3590-4f0e-9976-f0f4a5d5224b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{aluno_situacao}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-5" y="-1" width="829" height="1" uuid="768d92f0-3a01-4f43-844b-74ad736bda97"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="30">
+			<textField pattern="h.mm.ss a">
+				<reportElement x="383" y="10" width="100" height="20" uuid="d9c789ab-c10b-465a-86c4-8e4d2fc74b52"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="702" y="10" width="100" height="20" uuid="db3bdd5d-e6b9-4a72-9b88-1a8c4c62f95c"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="307" y="10" width="100" height="20" uuid="241ed798-4c0c-4db1-afa6-bbb74dfbc53c"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="315" height="20" uuid="78db9a78-ca1b-414e-ae11-c2fd830e75b6"/>
+				<text><![CDATA[Associação de Estudantes Universitários - ASSESU -Dois Vizinhos,]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
