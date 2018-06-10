@@ -1,0 +1,44 @@
+create table Aluno(
+	Cod_Aluno serial primary key,
+	Nome varchar(50),
+	Cpf char(15),
+	RG char(13),
+	Instituicao varchar(60),
+	Observacao varchar(200),
+	Transporte varchar(40),
+	Rua varchar(40),
+	Bairro varchar(30),
+	Cidade varchar(30),
+	Estado varchar(25),
+	CEP char(11),
+	Telefone char(15),
+	Email varchar(60)
+	)
+
+create table Empresa(
+	Cod_Empresa serial primary key,
+	nomefantasia varchar(50),
+	razaosocial varchar(50),
+	CNPJ char(18),
+	Inscricao_Estadual char(13),
+	Matriz varchar(30),
+	Representante varchar(50),
+	Telefone char(14),
+	Valor char(10)
+	)
+create table OrgFomentador(
+	Cod_OrgFomentador serial primary key,
+	nomefantasia varchar(50),
+	razaosocial varchar(50),
+	CNPJ char(18),
+	Inscricao_Estadual char(13),
+	Representante varchar(50),
+	Telefone char(14)
+	)
+create table Usuario(
+	Nome varchar(50),
+	Login varchar(15),
+	Senha varchar(15)
+	)
+INSERT INTO Usuario(Nome, Login, Senha) 
+VALUES ('Administrador', 'admin', 'admin')
