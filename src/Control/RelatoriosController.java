@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javax.swing.JOptionPane;
 import net.sf.jasperreports.engine.JRException;
 
 public class RelatoriosController implements Initializable {
@@ -22,6 +23,8 @@ public class RelatoriosController implements Initializable {
 
     @FXML
     private void relatorioAlunos(ActionEvent event) {
+        JOptionPane.showMessageDialog(null, "Abrirá em Instantes. Aguarde",
+                        "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         InputStream inputStream = getClass().getResourceAsStream("/Relatorios/Alunos.jasper");
         // mapa de parâmetros do relatório
         Map parametros = new HashMap();
@@ -35,6 +38,8 @@ public class RelatoriosController implements Initializable {
 
     @FXML
     private void relatorioEmpresas(ActionEvent event) {
+        JOptionPane.showMessageDialog(null, "Abrirá em Instantes. Aguarde",
+                        "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         InputStream inputStream = getClass().getResourceAsStream("/Relatorios/Empresas.jasper");
         // mapa de parâmetros do relatório
         Map parametros = new HashMap();
@@ -48,6 +53,8 @@ public class RelatoriosController implements Initializable {
 
     @FXML
     private void relatorioOrgFomentador(ActionEvent event) {
+        JOptionPane.showMessageDialog(null, "Abrirá em Instantes. Aguarde",
+                        "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         InputStream inputStream = getClass().getResourceAsStream("/Relatorios/OrgFomentador.jasper");
         // mapa de parâmetros do relatório
         Map parametros = new HashMap();
@@ -61,6 +68,8 @@ public class RelatoriosController implements Initializable {
 
     @FXML
     private void relatorioEmpresaAlunos(ActionEvent event) {
+        JOptionPane.showMessageDialog(null, "Abrirá em Instantes. Aguarde",
+                        "Sucesso", JOptionPane.INFORMATION_MESSAGE);
         InputStream inputStream = getClass().getResourceAsStream("/Relatorios/EmpresaAluno.jasper");
         // mapa de parâmetros do relatório
         Map parametros = new HashMap();
